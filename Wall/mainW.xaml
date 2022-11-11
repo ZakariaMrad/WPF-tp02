@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tp2.Wall"
         mc:Ignorable="d"
-        Title="mainW" Height="450" Width="800">
+        Title="mainW" Height="800" Width="1025">
     <Grid>
-        
+        <local:UserControlPost></local:UserControlPost>
     </Grid>
 </Window>
