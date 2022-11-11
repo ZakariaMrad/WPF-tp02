@@ -8,7 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+    <Folder Include="Marketplace\assets\" />
+=======
     <Folder Include="Wall\Assets\Pictues\" />
+>>>>>>> main
   </ItemGroup>
 
 </Project>
