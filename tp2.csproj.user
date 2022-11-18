@@ -13,7 +13,13 @@
     <Compile Update="Wall\mainW.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Wall\userControl\UserControlcontent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Wall\userControl\UserControlPost.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Wall\userControl\UserControlReaction.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,7 +33,13 @@
     <Page Update="Wall\mainW.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Wall\userControl\UserControlcontent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Wall\userControl\UserControlPost.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Wall\userControl\UserControlReaction.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -2,9 +2,12 @@
 
 namespace tp2.Wall.Assets.Classes
 {
-    class Reaction
+    public class Reaction
     {
         public int Id { get; set; }
-        List<User> users { get; set; }
+        public Reaction(User user)
+        {
+            Id = user.Id;
+        }   
     }
 }

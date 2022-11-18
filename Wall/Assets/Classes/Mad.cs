@@ -1,8 +1,9 @@
 ﻿namespace tp2.Wall.Assets.Classes
 {
-    class Mad : Reaction
+    public class Mad : Reaction
     {
-        public int Id { get; set; }
-        static string Path = "../Pictures/Mad.png";
-    }
-}
+        public Mad(User user) : base(user)
+        {
+
+        }
+    }}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,32 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using tp2.Wall.Assets.Classes;
 
 namespace tp2.Wall
 {
     /// <summary>
-    /// Logique d'interaction pour mainW.xaml
+    /// Logique d'interaction pour UserControlcontent.xaml
     /// </summary>
-    public partial class mainW : Window
+    public partial class UserControlcontent : UserControl
     {
-        public mainW()
+        public UserControlcontent()
         {
             InitializeComponent();
-            App.initMain();
-
-
-            displayByGroup();
         }
-
-        private void displayByGroup()
+        public UserControlcontent(Content content)
         {
-            PostsStack.Children.Clear();
-            foreach (var item in App.mainGroup.Posts)
-            {
-                PostsStack.Children.Add(new UserControlPost(item));
-            }
+            InitializeComponent();
+            Title.Text = "test";
+            Date.Text = content.DateTime.ToString();
+            Content.Text = content.Text;
         }
     }
 }
