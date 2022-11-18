@@ -10,6 +10,9 @@
     <Compile Update="Marketplace\mainMP.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Marketplace\userControl\UserControlMarketPlace.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Wall\mainW.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Marketplace\mainMP.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Marketplace\userControl\UserControlMarketPlace.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Wall\mainW.xaml">
