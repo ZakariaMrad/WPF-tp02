@@ -19,9 +19,20 @@ namespace tp2.Marketplace
     /// </summary>
     public partial class mainMP : Window
     {
+        
         public mainMP()
         {
             InitializeComponent();
+            InitializeCars();
+
+        }
+
+        private void InitializeCars()
+        {
+            foreach (Cars cars in App.Current)
+            {
+
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace tp2
 {
@@ -18,8 +19,6 @@ namespace tp2
             get { return Application.Current as App; }
         }
 
-        public Dictionary<int, Cars> Users = new Dictionary<int, Cars>();
-
         public class Cars
         {
             public int Id { get; set; }
@@ -30,5 +29,23 @@ namespace tp2
             public int CarPrice { get; set; }
             public int Kilometer { get; set; }
         }
+
+        public static readonly string ApplicationBaseUri = "pack://application:,,,/tp2;component/Marketplace";
+
+        public static Uri GetUri2(string path)
+        {
+            return new Uri(ApplicationBaseUri + path);
+        }
+
+     
     }
+
+      
+
+        public class Images
+        {
+            BitmapImage logo = new BitmapImage();
+            
+
+        }
 }

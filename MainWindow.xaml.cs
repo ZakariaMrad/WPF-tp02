@@ -12,8 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using tp2.Marketplace;
-using tp2.Wall;
 
 namespace tp2
 {
@@ -29,13 +27,7 @@ namespace tp2
 
         private void openMarketplace(object sender, RoutedEventArgs e)
         {
-            Window window = new mainMP();
-            window.Show();
-            Close();
-        }
-        private void openWall(object sender, RoutedEventArgs e)
-        {
-            Window window = new mainW();
+            Window window = new tp2.Marketplace.mainMP();
             window.Show();
             Close();
         }

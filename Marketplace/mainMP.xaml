@@ -5,8 +5,91 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tp2.Marketplace"
         mc:Ignorable="d"
-        Title="mainMP" Height="450" Width="800">
+        Title="mainMP" Height="800" Width="1025">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="255"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75px"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Background="#3C63B2">
+            <TextBlock HorizontalAlignment="Center" Padding="0,15,0,0" FontSize="25px" FontWeight="Bold" Foreground="White">MARKETPLACE</TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"  Background="#222222">
+            <!--start content for all-->
+            <StackPanel Margin="10,10,10,0">
+                <TextBlock Padding="0,0,0,10" Foreground="White">Category</TextBlock>
+                <ComboBox></ComboBox>
+                <TextBlock Foreground="White" Margin="0,5,0,10">Sort by</TextBlock>
+                <RadioButton Foreground="White" Margin="0,0,0,10" VerticalAlignment="Center">Date (newest first)</RadioButton>
+                <RadioButton Foreground="White"  VerticalAlignment="Center">Price (lowest first)</RadioButton>
+                <TextBlock Foreground="White" Margin="0,5,0,10">Price</TextBlock>
+                <WrapPanel>
+                    <TextBox Width="100px" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
+                    <TextBlock Foreground="White" VerticalAlignment="Center">to</TextBlock>
+                    <TextBox Width="100px" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
+                </WrapPanel>
+                <!--end content for all -->
+
+                <!--Cars-->
+                <StackPanel Visibility="Visible">
+                    <TextBlock Padding="0,10,0,10" Foreground="White">Maker</TextBlock>
+                    <ComboBox Height="25"></ComboBox>
+                    <TextBlock Padding="0,10,0,10" Foreground="White">Brand</TextBlock>
+                    <ComboBox></ComboBox>
+                    <TextBlock Foreground="White" Margin="0,5,0,5">Year</TextBlock>
+                    <WrapPanel Margin="0,0,0,10">
+                        <TextBox Width="100px" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
+                        <TextBlock Foreground="White" VerticalAlignment="Center">to</TextBlock>
+                        <TextBox Width="100px" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
+                    </WrapPanel>
+                    <TextBlock Foreground="White" Margin="0,5,0,5">Mileage</TextBlock>
+                    <WrapPanel Margin="0,0,0,5">
+                        <TextBox Width="100px" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
+                        <TextBlock Foreground="White" VerticalAlignment="Center">to</TextBlock>
+                        <TextBox Width="100px" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
+                    </WrapPanel>
+                </StackPanel>
+                <!--end Cars-->
+
+                <!--Appliances-->
+                <StackPanel Visibility="Collapsed">
+                    <TextBlock Padding="0,5,0,5" Foreground="White">Appliance type</TextBlock>
+                    <ComboBox Height="25"></ComboBox>
+                    <TextBlock Padding="0,5,0,5" Foreground="White">Brand</TextBlock>
+                    <ComboBox></ComboBox>
+                </StackPanel>
+                <!--end Appliances-->
+
+                <!--Appliances-->
+                <StackPanel Visibility="Collapsed">
+                    <TextBlock Padding="0,5,0,5" Foreground="White">Appliance type</TextBlock>
+                    <ComboBox Height="25"></ComboBox>
+                    <TextBlock Padding="0,5,0,5" Foreground="White">Rooms</TextBlock>
+                    <TextBox Width="80px" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,9,0" Background="#444444"></TextBox>
+                    <TextBlock Padding="0,5,0,5" Foreground="White">Bathrooms</TextBlock>
+                    <TextBox Width="80px" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,9,0" Background="#444444"></TextBox>
+                </StackPanel>
+                <!--end Appliances-->
+
+                <!--button search-->
+                <Button Margin="0,15,0,0" Height="40px" Background="#3C63B2" Foreground="White">Search</Button>
+                
+            </StackPanel>
+
+        </StackPanel>
+        <WrapPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Margin="0,15,0,0">
+            <local:UserControlMarketPlace></local:UserControlMarketPlace>
+            <local:UserControlMarketPlace></local:UserControlMarketPlace>
+            <local:UserControlMarketPlace></local:UserControlMarketPlace>
+            <local:UserControlMarketPlace></local:UserControlMarketPlace>
+            <local:UserControlMarketPlace></local:UserControlMarketPlace>
+        </WrapPanel>
     </Grid>
 </Window>

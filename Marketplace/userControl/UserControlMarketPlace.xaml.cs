@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace tp2.Marketplace.userControl
+namespace tp2.Marketplace
 {
     /// <summary>
     /// Logique d'interaction pour UserControlMarketPlace.xaml
@@ -23,6 +23,20 @@ namespace tp2.Marketplace.userControl
         public UserControlMarketPlace()
         {
             InitializeComponent();
+            InitializeImages();
+        }
+
+
+        private void InitializeImages()
+        {
+            BitmapImage logo = new BitmapImage();
+            logo.BeginInit();
+            logo.UriSource = App.GetUri2("/pourlemoment/Offers/Cars/car1.jpg");
+            logo.EndInit();
+
+
+            ProductImage.Source = logo;
+
         }
     }
 }
