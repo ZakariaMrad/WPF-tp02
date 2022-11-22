@@ -13,14 +13,16 @@ namespace tp2.Wall.Assets.Classes
         public List<Reaction> Reactions { get; set; }
         public BitmapImage Picture { get; set; }
         public Content Content { get; set; }
+        public DateTime Date { get; set; }
 
-        public Post(int id, User user, string picture, Content content)
+        public Post(int id, User user, string picture, Content content,DateTime date)
         {
             Id = id;
             User = user;
             Picture = new BitmapImage(App.GetUri(picture));
             Content = content;
             Reactions = new List<Reaction>();
+            Date = date ;
         } 
 
         public string Likes { get => Reactions.Count(x=>x is Like).ToString(); }

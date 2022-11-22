@@ -22,7 +22,7 @@
         <Button FontSize="20" Grid.Row="1" Grid.Column="0" Click="openMarketplace">
             Marketplace
         </Button>
-        <Button FontSize="20" Grid.Row="1" Grid.Column="1">
+        <Button FontSize="20" Grid.Row="1" Grid.Column="1" Click=" openWall">
             Wall
         </Button>
     </Grid>

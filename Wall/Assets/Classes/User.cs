@@ -31,5 +31,15 @@ namespace tp2.Wall.Assets.Classes
             Email = "";
             Friends= new List<Friend> ();
         }
+
+        public Post[] getPosts()
+        {
+            return App.Posts.Values.Where(x => x.User.Id == Id).ToArray();
+        }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }

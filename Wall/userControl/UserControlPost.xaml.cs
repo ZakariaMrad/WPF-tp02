@@ -31,15 +31,16 @@ namespace tp2.Wall
             InitializeComponent();
             Post = post;
             NameUser.Text = post.User.FirstName + " " + post.User.LastName;
-            TimeUser.Text = post.User.Time.ToString();
+            TimeUser.Text = Math.Floor(DateTime.Now.Subtract(Post.Date).TotalDays).ToString()+" Days ago";
             ProfPic.Source = post.User.ProfilPic;
 
 
             //Content
             ImagePost.Source = post.Picture;
             ContentTitle.Text = Post.Content.Title;
-            ContentDate.Text = Post.Content.DateTime.ToString(); ;
             ContentText.Text = Post.Content.Text;
+            ContentDate.Text = Post.Date.ToString("MMMM dd")+ " at "+ Post.Date.ToString("HH:MM");
+            updateReactions();
         }
         //Reaction
         private void RadioButton_Click(object sender, RoutedEventArgs e)
@@ -48,16 +49,16 @@ namespace tp2.Wall
             switch (ReactionWrap.Children.IndexOf(Radiobutton))
             {
                 case 0:
-                    Post.AddReaction(new Like(Post.User));
+                    Post.AddReaction(new Like(App.Current.CurrentUser));
                     break;
                 case 1:
-                    Post.AddReaction(new Love(Post.User));
+                    Post.AddReaction(new Love(App.Current.CurrentUser));
                     break;
                 case 2:
-                    Post.AddReaction(new Sad(Post.User));
+                    Post.AddReaction(new Sad(App.Current.CurrentUser));
                     break;
                 case 3:
-                    Post.AddReaction(new Mad(Post.User));
+                    Post.AddReaction(new Mad(App.Current.CurrentUser));
                     break;
             }
             updateReactions();

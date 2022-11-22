@@ -29,10 +29,6 @@ namespace tp2.Marketplace
 
         private void InitializeCars()
         {
-            foreach (Cars cars in App.Current)
-            {
-
-            }
         }
     }
 }

@@ -16,5 +16,21 @@ namespace tp2.Wall.Assets.Classes
             User1 = user1;
             User2 = user2;
         }
+
+
+        public bool isAFriend(User user)
+        {
+            return user == User1 || user==User2;
+        }
+
+        public override string ToString()
+        {
+            return (User1 == App.Current.CurrentUser ? User2 : User1).ToString();
+        }
+
+        public Post[] getPosts()
+        {
+            return (User1 == App.Current.CurrentUser ? User2 : User1).getPosts();
+        }
     }
 }

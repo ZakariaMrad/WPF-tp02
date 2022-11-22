@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 using tp2.Wall.Assets;
 using tp2.Wall.Assets.Classes;
 
@@ -20,7 +21,7 @@ namespace tp2
             get { return Application.Current as App; }
         }
 
-        public Dictionary<int, Cars> Users = new Dictionary<int, Cars>();
+        public Dictionary<int, Cars> Carss = new Dictionary<int, Cars>();
 
         public class Cars
         {
@@ -52,16 +53,16 @@ namespace tp2
 
         public static Dictionary<int, Post> Posts = new Dictionary<int, Post>()
         {
-            { 101,new Post(101,Users[1001],"/Posts/post1.jpg",new Content(1,"content1",DateTime.Now,"udsfidsf") ) },
-            { 102,new Post(102,Users[1001],"/Posts/post2.jpg",new Content(2,"content2",DateTime.Now,"udsfidsf") ) },
-            { 103,new Post(103,Users[1002],"/Posts/post3.jpg",new Content(3,"content3",DateTime.Now,"udsfidsf") ) },
-            { 104,new Post(104,Users[1002],"/Posts/post4.jpg",new Content(4,"content4",DateTime.Now,"udsfidsf") ) },
-            { 105,new Post(105,Users[1003],"/Posts/post5.jpg",new Content(5,"content5",DateTime.Now,"udsfidsf") ) },
-            { 106,new Post(106,Users[1003],"/Posts/post6.jpg",new Content(6,"content6",DateTime.Now,"udsfidsf") ) },
-            { 107,new Post(107,Users[1004],"/Posts/post7.jpg",new Content(7,"content7",DateTime.Now,"udsfidsf") ) },
-            { 108,new Post(108,Users[1004],"/Posts/post8.jpg",new Content(8,"content8",DateTime.Now,"udsfidsf") ) },
-            { 109,new Post(109,Users[1005],"/Posts/post9.jpg",new Content(8,"content8",DateTime.Now,"udsfidsf") ) },
-            { 110,new Post(110,Users[1005],"/Posts/post10.jpg",new Content(8,"content8",DateTime.Now,"udsfidsf") ) },
+            { 101,new Post(101,Users[1001],"/Posts/post1.jpg",new Content(1,"content1","udsfidsf"),new DateTime(2022,11,19,12,7,0) )},
+            { 102,new Post(102,Users[1001],"/Posts/post2.jpg",new Content(2,"content2","udsfidsf"),new DateTime(2022,11,18,13,45,0)) },
+            { 103,new Post(103,Users[1002],"/Posts/post3.jpg",new Content(3,"content3","udsfidsf"),new DateTime(2022,11,17,22,12,0) )},
+            { 104,new Post(104,Users[1002],"/Posts/post4.jpg",new Content(4,"content4","udsfidsf"),new DateTime(2022,11,17,13,28,0)) },
+            { 105,new Post(105,Users[1003],"/Posts/post5.jpg",new Content(5,"content5","udsfidsf"),new DateTime(2022,11,18,23,21,0)) },
+            { 106,new Post(106,Users[1003],"/Posts/post6.jpg",new Content(6,"content6","udsfidsf"),new DateTime(2022,11,19,21,56,0)) },
+            { 107,new Post(107,Users[1004],"/Posts/post7.jpg",new Content(7,"content7","udsfidsf"),new DateTime(2022,11,21,18,12,0)) },
+            { 108,new Post(108,Users[1004],"/Posts/post8.jpg",new Content(8,"content8","udsfidsf"),new DateTime(2022,11,19,23,18,0)) },
+            { 109,new Post(109,Users[1005],"/Posts/post9.jpg",new Content(8,"content8","udsfidsf"),new DateTime(2022,11,12,21,7,0)) },
+            { 110,new Post(110,Users[1005],"/Posts/post10.jpg",new Content(8,"content8","udsfidsf"),new DateTime(2022,11,16,11,49,0) ) },
         };
 
         public static Dictionary<int, Friend> Friends = new Dictionary<int, Friend>()
@@ -99,11 +100,11 @@ namespace tp2
 
 
 
-        public static readonly string ApplicationBaseUri = "pack://application:,,,/tp2;component/Marketplace";
+        public static readonly string ApplicationBaseUri2 = "pack://application:,,,/tp2;component/Marketplace";
 
         public static Uri GetUri2(string path)
         {
-            return new Uri(ApplicationBaseUri + path);
+            return new Uri(ApplicationBaseUri2 + path);
         }
 
      

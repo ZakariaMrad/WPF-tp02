@@ -31,5 +31,12 @@ namespace tp2
             window.Show();
             Close();
         }
+        private void openWall(object sender, RoutedEventArgs e)
+        {
+            Window window = new tp2.Wall.mainW();
+            window.Show();
+            Close();
+        }
+
     }
 }

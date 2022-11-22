@@ -40,13 +40,13 @@
                     <TextBlock x:Name="loves" VerticalAlignment="Center" Margin="5,0,0,0">0</TextBlock>
                 </WrapPanel>
             </RadioButton>
-            <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Margin="10,5" Padding="10,5" Click="RadioButton_Click">
+            <RadioButton FocusVisualStyle="{x:Null}" Style="{StaticResource {x:Type ToggleButton}}" Margin="10,5" Padding="10,5" Click="RadioButton_Click">
                 <WrapPanel>
                     <Image Source="\Wall\Assets/Icons/sad.png" Width="20" Height="auto"/>
                     <TextBlock x:Name="sad" VerticalAlignment="Center" Margin="5,0,0,0">0</TextBlock>
                 </WrapPanel>
             </RadioButton>
-            <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Margin="10,5" Padding="10,5" Click="RadioButton_Click">
+            <RadioButton FocusVisualStyle="{x:Null}" Style="{StaticResource {x:Type ToggleButton}}" Margin="10,5" Padding="10,5" Click="RadioButton_Click">
                 <WrapPanel>
                     <Image Source="\Wall\Assets/Icons/angry.png" Width="20" Height="auto"/>
                     <TextBlock x:Name="angry" VerticalAlignment="Center" Margin="5,0,0,0">0</TextBlock>
