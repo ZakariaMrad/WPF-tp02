@@ -25,7 +25,7 @@ namespace tp2.Wall.Assets.Classes
             Id = id;
             FirstName = firstName;
             LastName = lastName;
-            //ProfilPic = new BitmapImage(App.GetUri(profilPic));
+            ProfilPic = new BitmapImage(App.GetUri(profilPic));
             Time = time;
             Password = "";
             Email = "";

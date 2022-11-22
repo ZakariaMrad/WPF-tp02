@@ -21,6 +21,7 @@ namespace tp2.Wall
     /// </summary>
     public partial class mainW : Window
     {
+
         public mainW()
         {
             InitializeComponent();

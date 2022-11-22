@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <Folder Include="Marketplace\assets\" />
-=======
     <None Remove="Wall\Assets\Icons\angry.png" />
     <None Remove="Wall\Assets\Icons\like.png" />
     <None Remove="Wall\Assets\Icons\love.png" />
@@ -60,7 +58,6 @@
 
   <ItemGroup>
     <Folder Include="Wall\Assets\Pictues\" />
->>>>>>> main
   </ItemGroup>
 
 </Project>

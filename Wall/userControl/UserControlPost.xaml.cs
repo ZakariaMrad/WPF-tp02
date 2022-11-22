@@ -32,9 +32,43 @@ namespace tp2.Wall
             Post = post;
             NameUser.Text = post.User.FirstName + " " + post.User.LastName;
             TimeUser.Text = post.User.Time.ToString();
-            reactions = new UserControlReaction(Post);
-            contents = new UserControlcontent(Post.Content);
-            //ImagePost.Source = post.Picture
+            ProfPic.Source = post.User.ProfilPic;
+
+
+            //Content
+            ImagePost.Source = post.Picture;
+            ContentTitle.Text = Post.Content.Title;
+            ContentDate.Text = Post.Content.DateTime.ToString(); ;
+            ContentText.Text = Post.Content.Text;
+        }
+        //Reaction
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            var Radiobutton = (RadioButton)sender;
+            switch (ReactionWrap.Children.IndexOf(Radiobutton))
+            {
+                case 0:
+                    Post.AddReaction(new Like(Post.User));
+                    break;
+                case 1:
+                    Post.AddReaction(new Love(Post.User));
+                    break;
+                case 2:
+                    Post.AddReaction(new Sad(Post.User));
+                    break;
+                case 3:
+                    Post.AddReaction(new Mad(Post.User));
+                    break;
+            }
+            updateReactions();
+        }
+
+        private void updateReactions()
+        {
+            likes.Text = Post.Likes;
+            loves.Text = Post.Loves;
+            sad.Text = Post.Sad;
+            angry.Text = Post.Angry;
         }
     }
 }
