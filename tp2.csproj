@@ -16,6 +16,56 @@
     <None Remove="Marketplace\test\**" />
     <Page Remove="Marketplace\assets\**" />
     <Page Remove="Marketplace\test\**" />
+    <Folder Include="Marketplace\assets\" />
+    <None Remove="Wall\Assets\Icons\angry.png" />
+    <None Remove="Wall\Assets\Icons\like.png" />
+    <None Remove="Wall\Assets\Icons\love.png" />
+    <None Remove="Wall\Assets\Icons\sad.png" />
+    <None Remove="Wall\Assets\Posts\post1.jpg" />
+    <None Remove="Wall\Assets\Posts\post10.jpg" />
+    <None Remove="Wall\Assets\Posts\post11.jpg" />
+    <None Remove="Wall\Assets\Posts\post12.jpg" />
+    <None Remove="Wall\Assets\Posts\post2.jpg" />
+    <None Remove="Wall\Assets\Posts\post3.jpg" />
+    <None Remove="Wall\Assets\Posts\post4.jpg" />
+    <None Remove="Wall\Assets\Posts\post5.jpg" />
+    <None Remove="Wall\Assets\Posts\post6.jpg" />
+    <None Remove="Wall\Assets\Posts\post7.jpg" />
+    <None Remove="Wall\Assets\Posts\post8.jpg" />
+    <None Remove="Wall\Assets\Posts\post9.jpg" />
+    <None Remove="Wall\Assets\Users\user1.jpg" />
+    <None Remove="Wall\Assets\Users\user2.jpg" />
+    <None Remove="Wall\Assets\Users\user3.jpg" />
+    <None Remove="Wall\Assets\Users\user4.jpg" />
+    <None Remove="Wall\Assets\Users\user5.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Wall\Assets\Icons\angry.png" />
+    <Resource Include="Wall\Assets\Icons\like.png" />
+    <Resource Include="Wall\Assets\Icons\love.png" />
+    <Resource Include="Wall\Assets\Icons\sad.png" />
+    <Resource Include="Wall\Assets\Posts\post1.jpg" />
+    <Resource Include="Wall\Assets\Posts\post10.jpg" />
+    <Resource Include="Wall\Assets\Posts\post11.jpg" />
+    <Resource Include="Wall\Assets\Posts\post12.jpg" />
+    <Resource Include="Wall\Assets\Posts\post2.jpg" />
+    <Resource Include="Wall\Assets\Posts\post3.jpg" />
+    <Resource Include="Wall\Assets\Posts\post4.jpg" />
+    <Resource Include="Wall\Assets\Posts\post5.jpg" />
+    <Resource Include="Wall\Assets\Posts\post6.jpg" />
+    <Resource Include="Wall\Assets\Posts\post7.jpg" />
+    <Resource Include="Wall\Assets\Posts\post8.jpg" />
+    <Resource Include="Wall\Assets\Posts\post9.jpg" />
+    <Resource Include="Wall\Assets\Users\user1.jpg" />
+    <Resource Include="Wall\Assets\Users\user2.jpg" />
+    <Resource Include="Wall\Assets\Users\user3.jpg" />
+    <Resource Include="Wall\Assets\Users\user4.jpg" />
+    <Resource Include="Wall\Assets\Users\user5.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Wall\Assets\Pictues\" />
   </ItemGroup>
 
   <ItemGroup>
