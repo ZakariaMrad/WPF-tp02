@@ -24,11 +24,25 @@ namespace tp2.Marketplace
         {
             InitializeComponent();
             InitializeCars();
+            InitializeComboBox();
 
+        }
+
+        private void InitializeComboBox()
+        {
+            foreach (var item in collection)
+            {
+
+            }
         }
 
         private void InitializeCars()
         {
+            foreach (var item in App.cars.Values)
+            {
+                wrap.Children.Add(new UserControlMarketPlace(item)) ;
+
+            }
         }
     }
 }

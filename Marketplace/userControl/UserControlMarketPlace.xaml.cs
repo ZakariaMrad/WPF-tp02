@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using tp2.Marketplace.pourlemoment.Classes;
 
 namespace tp2.Marketplace
 {
@@ -20,23 +21,23 @@ namespace tp2.Marketplace
     /// </summary>
     public partial class UserControlMarketPlace : UserControl
     {
+        Cars Car;
+        public UserControlMarketPlace(Cars car)
+        {
+            Car = car;
+            InitializeComponent();
+            InitializeImages();
+        }
+
         public UserControlMarketPlace()
         {
             InitializeComponent();
-            InitializeImages();
         }
 
 
         private void InitializeImages()
         {
-            BitmapImage logo = new BitmapImage();
-            logo.BeginInit();
-            logo.UriSource = App.GetUri2("/pourlemoment/Offers/Cars/car1.jpg");
-            logo.EndInit();
-
-
-            ProductImage.Source = logo;
-
+            ProductImage.Source = new BitmapImage(App.GetUri2(Car.Image));
         }
     }
 }
