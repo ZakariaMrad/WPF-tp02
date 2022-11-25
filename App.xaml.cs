@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using tp2.Marketplace.pourlemoment.Classes;
 using tp2.Wall.Assets;
 using tp2.Wall.Assets.Classes;
 
@@ -21,24 +22,36 @@ namespace tp2
             get { return Application.Current as App; }
         }
 
-        public Dictionary<int, Cars> Carss = new Dictionary<int, Cars>();
-
-        public class Cars
-        {
-            public int Id { get; set; }
-            public string Image { get; set; }
-            public DateTime PublishDate { get; set; }
-            public string CarFabricant { get; set; }
-            public int CarYear { get; set; }
-            public int CarPrice { get; set; }
-            public int Kilometer { get; set; }
-        }
         public static readonly string ApplicationBaseUri = "pack://application:,,,/tp2;component/Wall/Assets";
 
         public static Uri GetUri(string path)
         {
             return new Uri(ApplicationBaseUri + path);
         }
+        public static readonly string ApplicationBaseUri2 = "pack://application:,,,/tp2;component/Marketplace/Assets";
+
+        public static Uri GetUri2(string path)
+        {
+            return new Uri(ApplicationBaseUri2 + path);
+        }
+
+
+        public static Dictionary<int, Cars> cars = new Dictionary<int, Cars>()
+        {
+           {1, new Cars("/Offers/Cars/car1.jpg", "2021-11-19", 6000 , "Honda   ", "Accord  ", 2014, 170)},
+           {2, new Cars( "/Offers/Cars/car2.jpg", "2021-11-19", 5000 , "Toyota  ", "Camry   ", 2015, 200)},
+           {3, new Cars( "/Offers/Cars/car3.jpg", "2021-11-21", 8000 , "Nissan  ", "Leaf    ", 2013, 210)},
+           {4, new Cars( "/Offers/Cars/car4.jpg", "2021-11-21", 10000, "Toyota  ", "Yaris   ", 2021, 20) },
+           {5, new Cars( "/Offers/Cars/car5.jpg", "2021-11-23", 1000 , "Honda   ", "Civic   ", 2001, 350)},
+           {6, new Cars( "/Offers/Cars/car6.jpg", "2021-11-23", 6000 , "Honda   ", "Civic   ", 2011, 140)},
+           {7, new Cars( "/Offers/Cars/car7.jpg", "2021-11-25", 20000, "Toyota  ", "Camry   ", 2021, 10)},
+           {8, new Cars( "/Offers/Cars/car8.jpg", "2021-11-25", 7000 , "Nissan  ", "Infiniti    ", 2015,150)},
+           {9, new Cars( "/Offers/Cars/car9.jpg", "2021-11-27", 9000 , "Nissan  ", "Infiniti    ", 2016,170)},
+           {10, new Cars( "/Offers/Cars/car10.jpg", "2021-11-27", 12000, "Honda   ", "Accord  ", 2018, 90)},
+           {11, new Cars( "/Offers/Cars/car11.jpg", "2021-11-29", 5000 , "Toyota  ", "Yaris   ", 2013, 210)},
+           {12, new Cars( "/Offers/Cars/car12.jpg", "2021-11-29", 2000, "Nissan  ", "Altima  ", 2003, 320)},
+
+        };
 
         public User CurrentUser { get; set; }
 
@@ -100,22 +113,7 @@ namespace tp2
 
 
 
-        public static readonly string ApplicationBaseUri2 = "pack://application:,,,/tp2;component/Marketplace";
-
-        public static Uri GetUri2(string path)
-        {
-            return new Uri(ApplicationBaseUri2 + path);
-        }
 
      
     }
-
-      
-
-        public class Images
-        {
-            BitmapImage logo = new BitmapImage();
-            
-
-        }
 }
