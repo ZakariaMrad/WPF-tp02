@@ -30,10 +30,10 @@ namespace tp2.Marketplace
 
         private void InitializeComboBox()
         {
-            foreach (var item in collection)
-            {
+            //foreach (var item in collection)
+            //{
 
-            }
+            //}
         }
 
         private void InitializeCars()

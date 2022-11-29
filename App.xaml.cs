@@ -22,6 +22,7 @@ namespace tp2
             get { return Application.Current as App; }
         }
 
+        private const string Text = "udsfidsf";
         public static readonly string ApplicationBaseUri = "pack://application:,,,/tp2;component/Wall/Assets";
 
         public static Uri GetUri(string path)
@@ -34,7 +35,7 @@ namespace tp2
         {
             return new Uri(ApplicationBaseUri2 + path);
         }
-
+        static string lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?";
 
         public static Dictionary<int, Cars> cars = new Dictionary<int, Cars>()
         {
@@ -66,16 +67,16 @@ namespace tp2
 
         public static Dictionary<int, Post> Posts = new Dictionary<int, Post>()
         {
-            { 101,new Post(101,Users[1001],"/Posts/post1.jpg",new Content(1,"content1","udsfidsf"),new DateTime(2022,11,19,12,7,0) )},
-            { 102,new Post(102,Users[1001],"/Posts/post2.jpg",new Content(2,"content2","udsfidsf"),new DateTime(2022,11,18,13,45,0)) },
-            { 103,new Post(103,Users[1002],"/Posts/post3.jpg",new Content(3,"content3","udsfidsf"),new DateTime(2022,11,17,22,12,0) )},
-            { 104,new Post(104,Users[1002],"/Posts/post4.jpg",new Content(4,"content4","udsfidsf"),new DateTime(2022,11,17,13,28,0)) },
-            { 105,new Post(105,Users[1003],"/Posts/post5.jpg",new Content(5,"content5","udsfidsf"),new DateTime(2022,11,18,23,21,0)) },
-            { 106,new Post(106,Users[1003],"/Posts/post6.jpg",new Content(6,"content6","udsfidsf"),new DateTime(2022,11,19,21,56,0)) },
-            { 107,new Post(107,Users[1004],"/Posts/post7.jpg",new Content(7,"content7","udsfidsf"),new DateTime(2022,11,21,18,12,0)) },
-            { 108,new Post(108,Users[1004],"/Posts/post8.jpg",new Content(8,"content8","udsfidsf"),new DateTime(2022,11,19,23,18,0)) },
-            { 109,new Post(109,Users[1005],"/Posts/post9.jpg",new Content(8,"content8","udsfidsf"),new DateTime(2022,11,12,21,7,0)) },
-            { 110,new Post(110,Users[1005],"/Posts/post10.jpg",new Content(8,"content8","udsfidsf"),new DateTime(2022,11,16,11,49,0) ) },
+            { 101,new Post(101,Users[1001],"/Posts/post1.jpg",new Content(1,"Is this you?",lorem),new DateTime(2022,11,19,12,7,0) )},
+            { 102,new Post(102,Users[1001],"/Posts/post2.jpg",new Content(2,"How to get rich 100% no scam",lorem),new DateTime(2022,11,18,13,45,0)) },
+            { 103,new Post(103,Users[1002],"/Posts/post3.jpg",new Content(3,"How to get back with your ex",lorem),new DateTime(2022,11,17,22,12,0) )},
+            { 104,new Post(104,Users[1002],"/Posts/post4.jpg",new Content(4,"This is the way to get into a mr.Beast video",lorem),new DateTime(2022,11,17,13,28,0)) },
+            { 105,new Post(105,Users[1003],"/Posts/post5.jpg",new Content(5,"How to get your hustle going",lorem),new DateTime(2022,11,18,23,21,0)) },
+            { 106,new Post(106,Users[1003],"/Posts/post6.jpg",new Content(6,"La réalité sur les probiotique",lorem),new DateTime(2022,11,19,21,56,0)) },
+            { 107,new Post(107,Users[1004],"/Posts/post7.jpg",new Content(7,"Become a twitter employee in two weeks",lorem),new DateTime(2022,11,21,18,12,0)) },
+            { 108,new Post(108,Users[1004],"/Posts/post8.jpg",new Content(8,"Find milf near you",lorem),new DateTime(2022,11,19,23,18,0)) },
+            { 109,new Post(109,Users[1005],"/Posts/post9.jpg",new Content(8,"This is the only way to get this ${itemm}",lorem),new DateTime(2022,11,12,21,7,0)) },
+            { 110,new Post(110,Users[1005],"/Posts/post10.jpg",new Content(9,"How to get 10000$ from the government",lorem),new DateTime(2022,11,16,11,49,0) ) },
         };
 
         public static Dictionary<int, Friend> Friends = new Dictionary<int, Friend>()

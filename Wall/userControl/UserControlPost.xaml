@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:tp2.Wall"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel Margin="10">
+    <StackPanel Margin="10" Background="#242423">
         
         <!--infos-->
-        <Grid Background="Black">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition Width="*"/>
@@ -54,10 +54,10 @@
             </RadioButton>
         </WrapPanel>
         <!--content-->
-        <StackPanel Background="Black">
+        <StackPanel>
             <TextBlock Margin="10,5,0,0" x:Name="ContentTitle" FontSize="15" FontWeight="DemiBold" Foreground="White">title</TextBlock>
             <TextBlock Margin="10,0" x:Name="ContentDate" Foreground="Gray">Date</TextBlock>
-            <TextBlock Margin="10,10" x:Name="ContentText" Foreground="White">Content</TextBlock>
+            <TextBlock Margin="10,10" x:Name="ContentText" Foreground="White" TextWrapping="Wrap">Content</TextBlock>
         </StackPanel>
 
 
