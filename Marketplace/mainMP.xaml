@@ -84,7 +84,7 @@
             </StackPanel>
 
         </StackPanel>
-        <ScrollViewer Grid.Column="1" Grid.Row="1">
+        <ScrollViewer Grid.Column="1" Grid.Row="1" Background="#FF3C3C3C">
             
         <WrapPanel x:Name="wrap" HorizontalAlignment="Center" Margin="0,15,0,0">
         </WrapPanel>
