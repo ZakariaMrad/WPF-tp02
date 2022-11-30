@@ -30,10 +30,32 @@ namespace tp2.Marketplace
 
         private void InitializeComboBox()
         {
-            //foreach (var item in collection)
-            //{
+            comboCategory.Items.Clear();
+            foreach (var item in App.Category)
+            {
+                comboCategory.Items.Add(item.Value);
+            }
+            comboCategory.SelectedIndex = 1;
 
-            //}
+            selectedCategory();
+        }
+
+        private void selectedCategory()
+        {
+            switch (comboCategory.SelectedIndex)
+            {
+                case 1:
+
+                break;
+
+                case 2:
+
+                break;
+
+                case 0:
+
+                break;
+            }
         }
 
         private void InitializeCars()

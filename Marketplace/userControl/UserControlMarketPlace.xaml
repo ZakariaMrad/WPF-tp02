@@ -5,10 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:tp2.Marketplace"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <StackPanel Background="LightBlue" Margin="5">
-        <Image x:Name="ProductImage" Height="200px" Width="200px"/>
-        <TextBlock x:Name="ProductId">999999</TextBlock>
-        <TextBlock x:Name="ProductName">Placeholder name</TextBlock>
+             d:DesignHeight="300" FontSize="15px" Width="220" Foreground="White">
+    <StackPanel Background="#FF252525" Margin="5,7,5,10">
+        <Image x:Name="ProductImage" Height="200px" Width="200px" Margin="0,5,0,0"/>
+        <WrapPanel>
+            <TextBlock x:Name="price" Width="170" FontWeight="Bold" Padding="5,5,0,0"></TextBlock>
+            <TextBlock x:Name="ProductDate" HorizontalAlignment="Right" Padding="0,5,0,0"></TextBlock>
+        </WrapPanel>
+        <TextBlock x:Name="ProductName" FontSize="13" Padding="5,2,0,0"></TextBlock>
+        <TextBlock x:Name="kilometer" FontStyle="Italic" FontWeight="Light" Padding="5,5,0,13" FontSize="12"></TextBlock>
     </StackPanel>
 </UserControl>
