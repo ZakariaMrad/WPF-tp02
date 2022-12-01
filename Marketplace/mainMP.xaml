@@ -27,8 +27,8 @@
                 <TextBlock Padding="0,0,0,10" Foreground="White">Category</TextBlock>
                 <ComboBox x:Name="comboCategory"></ComboBox>
                 <TextBlock Foreground="White" Margin="0,5,0,10">Sort by</TextBlock>
-                <RadioButton Foreground="White" Margin="0,0,0,10" VerticalAlignment="Center">Date (newest first)</RadioButton>
-                <RadioButton Foreground="White"  VerticalAlignment="Center">Price (lowest first)</RadioButton>
+                <RadioButton Foreground="White" Margin="0,0,0,10" x:Name="radioButtonDate" VerticalAlignment="Center">Date (newest first)</RadioButton>
+                <RadioButton Foreground="White" x:Name="radioButtonPrice" VerticalAlignment="Center">Price (lowest first)</RadioButton>
                 <TextBlock Foreground="White" Margin="0,5,0,10">Price</TextBlock>
                 <WrapPanel>
                     <TextBox Width="100px" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
@@ -38,7 +38,7 @@
                 <!--end content for all -->
 
                 <!--Cars-->
-                <StackPanel Visibility="Visible">
+                <StackPanel x:Name="visibilityCars" >
                     <TextBlock Padding="0,10,0,10" Foreground="White">Maker</TextBlock>
                     <ComboBox Height="25"></ComboBox>
                     <TextBlock Padding="0,10,0,10" Foreground="White">Brand</TextBlock>
@@ -59,7 +59,7 @@
                 <!--end Cars-->
 
                 <!--Appliances-->
-                <StackPanel Visibility="Collapsed">
+                <StackPanel x:Name="visibilityAppliances">
                     <TextBlock Padding="0,5,0,5" Foreground="White">Appliance type</TextBlock>
                     <ComboBox Height="25"></ComboBox>
                     <TextBlock Padding="0,5,0,5" Foreground="White">Brand</TextBlock>
@@ -67,27 +67,29 @@
                 </StackPanel>
                 <!--end Appliances-->
 
-                <!--Appliances-->
-                <StackPanel Visibility="Collapsed">
-                    <TextBlock Padding="0,5,0,5" Foreground="White">Appliance type</TextBlock>
+                <!--Property Rentals-->
+                <StackPanel x:Name="visibilityRentals">
+                    <TextBlock Padding="0,5,0,5" Foreground="White">Property Rentals</TextBlock>
                     <ComboBox Height="25"></ComboBox>
                     <TextBlock Padding="0,5,0,5" Foreground="White">Rooms</TextBlock>
                     <TextBox Width="80px" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,9,0" Background="#444444"></TextBox>
                     <TextBlock Padding="0,5,0,5" Foreground="White">Bathrooms</TextBlock>
                     <TextBox Width="80px" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,9,0" Background="#444444"></TextBox>
                 </StackPanel>
-                <!--end Appliances-->
+                <!--end Property Rentals-->
 
                 <!--button search-->
-                <Button Margin="0,15,0,0" Height="40px" Background="#3C63B2" Foreground="White">Search</Button>
+                <Button Margin="0,15,0,0" Height="40px" x:Name="buttonSearch" Background="#3C63B2" Foreground="White">Search</Button>
                 
             </StackPanel>
 
+        <!-- userControl -->
         </StackPanel>
-        <ScrollViewer Grid.Column="1" Grid.Row="1" Background="#FF3C3C3C">
-            
-        <WrapPanel x:Name="wrap" HorizontalAlignment="Center" Margin="0,15,0,0">
-        </WrapPanel>
+        <WrapPanel Grid.Column="1" Grid.Row="1" Background="#FF3C3C3C" HorizontalAlignment="Center">
+            <ScrollViewer x:Name="userControlVisibility" >
+
+                <WrapPanel x:Name="wrap" HorizontalAlignment="Center" Margin="0"></WrapPanel>
         </ScrollViewer>
+        </WrapPanel>
     </Grid>
 </Window>
