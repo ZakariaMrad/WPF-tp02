@@ -25,8 +25,10 @@ namespace tp2.Marketplace
             InitializeComponent();
             InitializeCars();
             InitializeComboBox();
-
+            AddEvents();
         }
+
+
 
         private void InitializeComboBox()
         {
@@ -45,17 +47,45 @@ namespace tp2.Marketplace
             switch (comboCategory.SelectedIndex)
             {
                 case 1:
-
-                break;
-
+                    Visible();
+                    visibilityCars.Visibility = Visibility.Visible;
+                    userControlVisibility.Visibility = Visibility.Visible;
+                    break;
                 case 2:
-
-                break;
+                    Visible();
+                    visibilityRentals.Visibility = Visibility.Visible;
+                    userControlVisibility.Visibility = Visibility.Hidden;
+                    break;
 
                 case 0:
-
+                    Visible();
+                    visibilityAppliances.Visibility = Visibility.Visible;
+                    userControlVisibility.Visibility = Visibility.Hidden;
                 break;
             }
+        }
+
+        private void AddEvents()
+        {
+            comboCategory.SelectionChanged += ComboCategory_SelectionChanged;
+            buttonSearch.Click += ButtonSearch_Click;
+        }
+
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ComboCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedCategory();
+        }
+
+        private void Visible()
+        {
+            visibilityAppliances.Visibility = Visibility.Collapsed;
+            visibilityCars.Visibility = Visibility.Collapsed;
+            visibilityRentals.Visibility = Visibility.Collapsed;
         }
 
         private void InitializeCars()
@@ -63,7 +93,6 @@ namespace tp2.Marketplace
             foreach (var item in App.cars.Values)
             {
                 wrap.Children.Add(new UserControlMarketPlace(item)) ;
-
             }
         }
     }
