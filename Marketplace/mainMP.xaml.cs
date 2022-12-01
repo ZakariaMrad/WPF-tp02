@@ -24,7 +24,8 @@ namespace tp2.Marketplace
         {
             InitializeComponent();
             InitializeCars();
-            InitializeComboBox();
+            InitializeComboBox(); 
+            InitializeComboBoxMaker();
             AddEvents();
         }
 
@@ -40,6 +41,35 @@ namespace tp2.Marketplace
             comboCategory.SelectedIndex = 1;
 
             selectedCategory();
+        }
+
+        private void InitializeComboBoxMaker()
+        {
+
+            List<string> disctintBrands = new List<string>();
+            Maker.Items.Clear();
+            string lastEntered = "";
+            foreach (var dictionnary in App.cars)
+            {
+                //dictionnary.Key --> Output le id 
+                //dictionnary.Value --> car
+                if (lastEntered != dictionnary.Value.CarFabricant)
+                {
+                    disctintBrands.Add(dictionnary.Value.CarFabricant);
+                    lastEntered = dictionnary.Value.CarFabricant;
+                }
+            }
+
+         
+           
+            disctintBrands = disctintBrands.Distinct().ToList();
+
+            foreach (var item in disctintBrands)
+            {
+                Maker.Items.Add(item);
+            }
+           
+
         }
 
         private void selectedCategory()
@@ -73,7 +103,31 @@ namespace tp2.Marketplace
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
+            wrap.Children.Clear();
+            if (radioButtonDate.IsChecked == true)
+            sortDate();
+            if (radioButtonPrice.IsChecked == true)
+                sortPrice();
+
             
+        }
+
+        private void sortPrice()
+        {
+            var cars = App.cars.Values.OrderBy(x => x.CarPrice);
+            foreach (var item in cars)
+            {
+                wrap.Children.Add(new UserControlMarketPlace(item));
+            }
+        }
+
+        private void sortDate()
+        {
+            var cars = App.cars.Values.OrderByDescending(x => x.CarYear);
+            foreach (var item in cars)
+            {
+                wrap.Children.Add(new UserControlMarketPlace(item));
+            }
         }
 
         private void ComboCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)

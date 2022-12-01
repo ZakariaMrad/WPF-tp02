@@ -40,7 +40,7 @@
                 <!--Cars-->
                 <StackPanel x:Name="visibilityCars" >
                     <TextBlock Padding="0,10,0,10" Foreground="White">Maker</TextBlock>
-                    <ComboBox Height="25"></ComboBox>
+                    <ComboBox Height="25" x:Name="Maker"></ComboBox>
                     <TextBlock Padding="0,10,0,10" Foreground="White">Brand</TextBlock>
                     <ComboBox></ComboBox>
                     <TextBlock Foreground="White" Margin="0,5,0,5">Year</TextBlock>
