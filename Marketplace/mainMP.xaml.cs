@@ -49,11 +49,9 @@ namespace tp2.Marketplace
             List<string> disctintBrands = new List<string>();
             Maker.Items.Clear();
             string lastEntered = "";
-            foreach (var dictionnary in App.cars)
+            foreach (var dictionnary in App.cars.Values)
             {
-                //dictionnary.Key --> Output le id 
-                //dictionnary.Value --> car
-                if (lastEntered != dictionnary.Value.CarFabricant)
+                if (lastEntered != dictionnary.CarFabricant)
                 {
                     disctintBrands.Add(dictionnary.Value.CarFabricant);
                     lastEntered = dictionnary.Value.CarFabricant;
