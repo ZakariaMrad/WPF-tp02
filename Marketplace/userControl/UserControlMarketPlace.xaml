@@ -9,7 +9,7 @@
     <StackPanel Background="#FF252525" Margin="5,7,5,10">
         <Image x:Name="ProductImage" Height="200px" Width="200px" Margin="0,5,0,0"/>
         <WrapPanel>
-            <TextBlock x:Name="price" Width="170" FontWeight="Bold" Padding="5,5,0,0"></TextBlock>
+            <TextBlock x:Name="price" Width="140" FontWeight="Bold" Padding="5,5,0,0"></TextBlock>
             <TextBlock x:Name="ProductDate" HorizontalAlignment="Right" Padding="0,5,0,0"></TextBlock>
         </WrapPanel>
         <TextBlock x:Name="ProductName" FontSize="13" Padding="5,2,0,0"></TextBlock>

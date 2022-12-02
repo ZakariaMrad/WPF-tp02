@@ -39,20 +39,19 @@ namespace tp2
 
         public static Dictionary<int, Cars> cars = new Dictionary<int, Cars>()
         {           
-            {1, new Cars(){ Image = "/Offers/Cars/car1.jpg", "2021-11-19", 6000 , "Honda", "Accord", 2014, 170} },
 
-           {1, new Cars( Image = "/Offers/Cars/car1.jpg", "2021-11-19", 6000 , "Honda", "Accord", 2014, 170)},
-           {2, new Cars( "/Offers/Cars/car2.jpg", "2021-11-19", 5000 , "Toyota", "Camry", 2015, 200)},
-           {3, new Cars( "/Offers/Cars/car3.jpg", "2021-11-21", 8000 , "Nissan", "Leaf", 2013, 210)},
-           {4, new Cars( "/Offers/Cars/car4.jpg", "2021-11-21", 10000, "Toyota", "Yaris", 2021, 20) },
-           {5, new Cars( "/Offers/Cars/car5.jpg", "2021-11-23", 1000 , "Honda", "Civic", 2001, 350)},
-           {6, new Cars( "/Offers/Cars/car6.jpg", "2021-11-23", 6000 , "Honda", "Civic", 2011, 140)},
-           {7, new Cars( "/Offers/Cars/car7.jpg", "2021-11-25", 20000, "Toyota", "Camry", 2021, 10)},
-           {8, new Cars( "/Offers/Cars/car8.jpg", "2021-11-25", 7000 , "Nissan", "Infiniti", 2015,150)},
-           {9, new Cars( "/Offers/Cars/car9.jpg", "2021-11-27", 9000 , "Nissan", "Infiniti", 2016,170)},
-           {10, new Cars( "/Offers/Cars/car10.jpg", "2021-11-27", 12000, "Honda", "Accord", 2018, 90)},
-           {11, new Cars( "/Offers/Cars/car11.jpg", "2021-11-29", 5000 , "Toyota", "Yaris", 2013, 210)},
-           {12, new Cars( "/Offers/Cars/car12.jpg", "2021-11-29", 2000, "Nissan", "Altima", 2003, 320)},
+           {1, new Cars( ){Image ="/Offers/Cars/car1.jpg", PublishDate="2021-11-19",CarPrice=6000 ,CarFabricant="Honda", CarName="Accord",   CarYear=2014,Kilometer=170}},
+           {2, new Cars( ){Image ="/Offers/Cars/car2.jpg", PublishDate="2021-11-19",CarPrice=5000 ,CarFabricant="Toyota",CarName="Camry",    CarYear=2015,Kilometer=200}},
+           {3, new Cars( ){Image ="/Offers/Cars/car3.jpg", PublishDate="2021-11-21",CarPrice=8000 ,CarFabricant="Nissan",CarName="Leaf",     CarYear=2013,Kilometer=210}},
+           {4, new Cars( ){Image ="/Offers/Cars/car4.jpg", PublishDate="2021-11-21",CarPrice=10000,CarFabricant="Toyota",CarName="Yaris",    CarYear=2021,Kilometer=20 }},
+           {5, new Cars( ){Image ="/Offers/Cars/car5.jpg", PublishDate="2021-11-23",CarPrice=1000 ,CarFabricant="Honda", CarName="Civic",    CarYear=2001,Kilometer=350}},
+           {6, new Cars( ){Image ="/Offers/Cars/car6.jpg", PublishDate="2021-11-23",CarPrice=6000 ,CarFabricant="Honda", CarName="Civic",    CarYear=2011,Kilometer=140}},
+           {7, new Cars( ){Image ="/Offers/Cars/car7.jpg", PublishDate="2021-11-25",CarPrice=20000,CarFabricant="Toyota",CarName="Camry",    CarYear=2021,Kilometer=10}},
+           {8, new Cars( ){Image ="/Offers/Cars/car8.jpg", PublishDate="2021-11-25",CarPrice=7000 ,CarFabricant="Nissan",CarName="Infiniti", CarYear=2015,Kilometer=150}},
+           {9, new Cars( ){Image ="/Offers/Cars/car9.jpg", PublishDate="2021-11-27",CarPrice=9000 ,CarFabricant="Nissan",CarName="Infiniti", CarYear=2016,Kilometer=170}},
+           {10, new Cars(){Image ="/Offers/Cars/car10.jpg",PublishDate="2021-11-27",CarPrice=12000,CarFabricant="Honda", CarName="Accord",   CarYear=2018,Kilometer=90}},
+           {11, new Cars(){Image ="/Offers/Cars/car11.jpg",PublishDate="2021-11-29",CarPrice=5000 ,CarFabricant="Toyota",CarName="Yaris",    CarYear=2013,Kilometer=210}},
+           {12, new Cars(){Image ="/Offers/Cars/car12.jpg",PublishDate="2021-11-29",CarPrice=2000, CarFabricant="Nissan",CarName="Altima",   CarYear=2003,Kilometer=320} },
 
         };
 
