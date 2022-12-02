@@ -53,8 +53,8 @@ namespace tp2.Marketplace
             {
                 if (lastEntered != dictionnary.CarFabricant)
                 {
-                    disctintBrands.Add(dictionnary.Value.CarFabricant);
-                    lastEntered = dictionnary.Value.CarFabricant;
+                    disctintBrands.Add(dictionnary.CarFabricant);
+                    lastEntered = dictionnary.CarFabricant;
                 }
             }
 
@@ -103,14 +103,46 @@ namespace tp2.Marketplace
         {
             wrap.Children.Clear();
             if (radioButtonDate.IsChecked == true)
-            sortDate();
+            SortDate();
             if (radioButtonPrice.IsChecked == true)
-                sortPrice();
+            SortAllByPrice();
+            if (priceStart.Text != "" || priceEnd.Text != "")
+            SortByPrice();
 
             
         }
 
-        private void sortPrice()
+        private void SortByPrice()
+        {
+            if(priceEnd.Text != "")
+            {
+                string PrixFin = priceEnd.Text;
+
+                if (priceStart.Text != "")
+                {
+                    string PrixDebut = priceStart.Text;
+                }
+
+
+
+            }
+
+            if (priceStart.Text != "")
+            {
+                string PrixDebut = priceStart.Text;
+
+                if (priceEnd.Text != "")
+                {
+                    string PrixFin = priceStart.Text;
+                }
+
+
+            }
+
+
+        }
+
+        private void SortAllByPrice()
         {
             var cars = App.cars.Values.OrderBy(x => x.CarPrice);
             foreach (var item in cars)
@@ -119,7 +151,7 @@ namespace tp2.Marketplace
             }
         }
 
-        private void sortDate()
+        private void SortDate()
         {
             var cars = App.cars.Values.OrderByDescending(x => x.CarYear);
             foreach (var item in cars)

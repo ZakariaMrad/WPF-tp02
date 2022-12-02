@@ -39,8 +39,8 @@ namespace tp2.Marketplace
         {
             ProductImage.Source = new BitmapImage(App.GetUri2(Car.Image));
             price.Text = Car.CarPrice.ToString() + "$";
-            ProductDate.Text = Car.CarYear.ToString();
-            string textYearMarque = Car.CarYear.ToString() + " " + Car.CarFabricant.ToString() +" "+ Car.Brand.ToString();
+            ProductDate.Text = Car.PublishDate.ToString();
+            string textYearMarque = Car.CarYear.ToString() + " " + Car.CarFabricant.ToString() +" "+ Car.CarName.ToString();
             ProductName.Text = textYearMarque;
             kilometer.Text = Car.Kilometer.ToString() + "k km";
         }
