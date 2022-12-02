@@ -31,9 +31,9 @@
                 <RadioButton Foreground="White" x:Name="radioButtonPrice" VerticalAlignment="Center">Price (lowest first)</RadioButton>
                 <TextBlock Foreground="White" Margin="0,5,0,10">Price</TextBlock>
                 <WrapPanel>
-                    <TextBox Width="100px" BorderThickness="0" x:Name="priceStart" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
+                    <TextBox Width="100px" Foreground="White" VerticalAlignment="Center" BorderThickness="0" x:Name="priceStart" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
                     <TextBlock Foreground="White" VerticalAlignment="Center">to</TextBlock>
-                    <TextBox Width="100px" x:Name="priceEnd" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
+                    <TextBox Width="100px" Foreground="White" VerticalAlignment="Center" x:Name="priceEnd" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
                 </WrapPanel>
                 <!--end content for all -->
 

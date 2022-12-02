@@ -109,34 +109,40 @@ namespace tp2.Marketplace
             if (priceStart.Text != "" || priceEnd.Text != "")
             SortByPrice();
 
+            clearAllEvents();
+
             
+        }
+
+        private void clearAllEvents()
+        {
+            radioButtonDate.IsChecked = false;
+            radioButtonPrice.IsChecked = false;
+            priceEnd.Text = "";
+            priceStart.Text = "";
         }
 
         private void SortByPrice()
         {
-            if(priceEnd.Text != "")
-            {
-                string PrixFin = priceEnd.Text;
+                int prixFin =  int.MaxValue;
+                int prixDebut = int.MinValue;
 
                 if (priceStart.Text != "")
                 {
-                    string PrixDebut = priceStart.Text;
+                    prixDebut = int.Parse(priceStart.Text);
                 }
-
-
-
-            }
-
-            if (priceStart.Text != "")
-            {
-                string PrixDebut = priceStart.Text;
 
                 if (priceEnd.Text != "")
                 {
-                    string PrixFin = priceStart.Text;
+                    prixFin = int.Parse(priceStart.Text);
                 }
 
 
+            var priceInMiddle = App.cars.Values.Where(a => a.CarPrice - prixDebut >= 0 && a.CarPrice - prixFin <= 0);
+
+            foreach (var item in priceInMiddle)
+            {
+                wrap.Children.Add(new UserControlMarketPlace(item));
             }
 
 
