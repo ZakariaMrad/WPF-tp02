@@ -26,10 +26,20 @@ namespace tp2.Marketplace
             InitializeCars();
             InitializeComboBox(); 
             InitializeComboBoxMaker();
+            InitializeComboBoxBrand();
             AddEvents();
         }
 
+        private void InitializeComboBoxBrand()
+        {
+            brand.Items.Clear();
+            brand.Items.Add("All");
 
+            foreach (var item in App.Current.cars.Values.Select(a => a.CarName).Distinct())
+            {
+                brand.Items.Add(item);
+            }
+        }
 
         private void InitializeComboBox()
         {
@@ -45,28 +55,14 @@ namespace tp2.Marketplace
 
         private void InitializeComboBoxMaker()
         {
-
-            List<string> disctintBrands = new List<string>();
             Maker.Items.Clear();
-            string lastEntered = "";
-            foreach (var dictionnary in App.cars.Values)
-            {
-                if (lastEntered != dictionnary.CarFabricant)
-                {
-                    disctintBrands.Add(dictionnary.CarFabricant);
-                    lastEntered = dictionnary.CarFabricant;
-                }
-            }
+            Maker.Items.Add("All");
 
-         
-           
-            disctintBrands = disctintBrands.Distinct().ToList();
-
-            foreach (var item in disctintBrands)
+            foreach (var item in App.Current.cars.Values.Select(a => a.CarFabricant).Distinct())
             {
                 Maker.Items.Add(item);
             }
-           
+
 
         }
 
@@ -108,10 +104,108 @@ namespace tp2.Marketplace
             SortAllByPrice();
             if (priceStart.Text != "" || priceEnd.Text != "")
             SortByPrice();
+            if (Maker.SelectedIndex != -1)
+            SortByMaker();
+            if (brand.SelectedIndex != -1)
+            SortByBrand();
+            if (yearEnd.Text != "" || yearStart.Text != "")
+                SortByYear();
+            if (kiloStart.Text != "" || kiloEnd.Text != "")
+                SortByKilometer();
 
             clearAllEvents();
 
             
+        }
+
+        private void SortByKilometer()
+        {
+            int KiloDebut = int.MinValue;
+            int KiloFin = int.MaxValue;
+
+            if (kiloStart.Text != "")
+            {
+                int.TryParse(kiloStart.Text, out KiloDebut);
+            }
+
+            if (kiloEnd.Text != "")
+            {
+                int.TryParse(kiloEnd.Text, out KiloFin);
+            }
+
+
+            var priceInMiddle = App.Current.cars.Values.Where(a => a.Kilometer >= KiloDebut && a.Kilometer <= KiloFin);
+
+            foreach (var item in priceInMiddle)
+            {
+                wrap.Children.Add(new UserControlMarketPlace(item));
+            }
+        }
+
+        private void SortByYear()
+        {
+            int anneeDebut = int.MinValue;
+            int anneeFin = int.MaxValue;
+
+            if (yearStart.Text != "")
+            {
+                int.TryParse(yearStart.Text, out anneeDebut);
+            }
+
+            if (yearEnd.Text != "")
+            {
+                int.TryParse(yearEnd.Text, out anneeFin);
+            }
+
+
+            var priceInMiddle = App.Current.cars.Values.Where(a => a.CarYear >= anneeDebut && a.CarYear <= anneeFin);
+
+            foreach (var item in priceInMiddle)
+            {
+                wrap.Children.Add(new UserControlMarketPlace(item));
+            }
+        }
+
+        private void SortByBrand()
+        {
+            string selectionBrand = brand.Text;
+
+            if (selectionBrand == "All")
+            {
+                foreach (var item in App.Current.cars.Values)
+                {
+                    wrap.Children.Add(new UserControlMarketPlace(item));
+                }
+            }
+            else
+            {
+                var cars = App.Current.cars.Values.Where(a => a.CarName == selectionBrand);
+                foreach (var item in cars)
+                {
+                    wrap.Children.Add(new UserControlMarketPlace(item));
+                }
+            }
+        }
+
+        private void SortByMaker()
+        {
+            string selectionFabricant = Maker.Text;
+
+            if (selectionFabricant == "All")
+            {
+                foreach (var item in App.Current.cars.Values)
+                {
+                    wrap.Children.Add(new UserControlMarketPlace(item));
+                }
+            }
+            else
+            {
+                var cars = App.Current.cars.Values.Where(a => a.CarFabricant == selectionFabricant);
+                foreach (var item in cars)
+                {
+                    wrap.Children.Add(new UserControlMarketPlace(item));
+                }
+            }
         }
 
         private void clearAllEvents()
@@ -120,6 +214,12 @@ namespace tp2.Marketplace
             radioButtonPrice.IsChecked = false;
             priceEnd.Text = "";
             priceStart.Text = "";
+            Maker.SelectedIndex = -1;
+            brand.SelectedIndex = -1;
+            yearStart.Text = "";
+            yearEnd.Text = "";
+            kiloEnd.Text = "";
+            kiloStart.Text = "";
         }
 
         private void SortByPrice()
@@ -129,16 +229,16 @@ namespace tp2.Marketplace
 
                 if (priceStart.Text != "")
                 {
-                    prixDebut = int.Parse(priceStart.Text);
+                    int.TryParse(priceStart.Text,out prixDebut);
                 }
 
                 if (priceEnd.Text != "")
                 {
-                    prixFin = int.Parse(priceStart.Text);
+                    int.TryParse(priceEnd.Text,out prixFin);
                 }
 
 
-            var priceInMiddle = App.cars.Values.Where(a => a.CarPrice - prixDebut >= 0 && a.CarPrice - prixFin <= 0);
+            var priceInMiddle = App.Current.cars.Values.Where(a => a.CarPrice >= prixDebut && a.CarPrice <= prixFin);
 
             foreach (var item in priceInMiddle)
             {
@@ -150,7 +250,7 @@ namespace tp2.Marketplace
 
         private void SortAllByPrice()
         {
-            var cars = App.cars.Values.OrderBy(x => x.CarPrice);
+            var cars = App.Current.cars.Values.OrderBy(x => x.CarPrice);
             foreach (var item in cars)
             {
                 wrap.Children.Add(new UserControlMarketPlace(item));
@@ -159,7 +259,7 @@ namespace tp2.Marketplace
 
         private void SortDate()
         {
-            var cars = App.cars.Values.OrderByDescending(x => x.CarYear);
+            var cars = App.Current.cars.Values.OrderByDescending(x => x.CarYear);
             foreach (var item in cars)
             {
                 wrap.Children.Add(new UserControlMarketPlace(item));
@@ -180,7 +280,7 @@ namespace tp2.Marketplace
 
         private void InitializeCars()
         {
-            foreach (var item in App.cars.Values)
+            foreach (var item in App.Current.cars.Values)
             {
                 wrap.Children.Add(new UserControlMarketPlace(item)) ;
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tp2.Marketplace.pourlemoment.Classes
 {
-    public class Cars
+    public class Cars : Offer
     {
         public string Image { get; set; }
         public string PublishDate { get; set; }

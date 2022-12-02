@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:tp2.Marketplace"
         mc:Ignorable="d"
         Title="mainMP" Height="800" Width="1025">
-    <Grid>
+    <Grid Background="#FF3C3C3C">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="255"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -42,18 +42,18 @@
                     <TextBlock Padding="0,10,0,10" Foreground="White">Maker</TextBlock>
                     <ComboBox Height="25" x:Name="Maker"></ComboBox>
                     <TextBlock Padding="0,10,0,10" Foreground="White">Brand</TextBlock>
-                    <ComboBox></ComboBox>
+                    <ComboBox x:Name="brand"></ComboBox>
                     <TextBlock Foreground="White" Margin="0,5,0,5">Year</TextBlock>
                     <WrapPanel Margin="0,0,0,10">
-                        <TextBox Width="100px" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
+                        <TextBox Width="100px" Foreground="White" x:Name="yearStart" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
                         <TextBlock Foreground="White" VerticalAlignment="Center">to</TextBlock>
-                        <TextBox Width="100px" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
+                        <TextBox Width="100px" Foreground="White" x:Name="yearEnd" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
                     </WrapPanel>
                     <TextBlock Foreground="White" Margin="0,5,0,5">Mileage</TextBlock>
                     <WrapPanel Margin="0,0,0,5">
-                        <TextBox Width="100px" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
+                        <TextBox Width="100px" x:Name="kiloStart" BorderThickness="0" Margin="0,0,9,0" Height="25px" Background="#444444"></TextBox>
                         <TextBlock Foreground="White" VerticalAlignment="Center">to</TextBlock>
-                        <TextBox Width="100px" Margin="9,0,0,0" BorderThickness="0" Height="25" Background="#444444"></TextBox>
+                        <TextBox Width="100px" Margin="9,0,0,0" x:Name="kiloEnd" BorderThickness="0" Height="25" Background="#444444"></TextBox>
                     </WrapPanel>
                 </StackPanel>
                 <!--end Cars-->
@@ -80,16 +80,14 @@
 
                 <!--button search-->
                 <Button Margin="0,15,0,0" Height="40px" x:Name="buttonSearch" Background="#3C63B2" Foreground="White">Search</Button>
-                
+
             </StackPanel>
 
-        <!-- userControl -->
-        </StackPanel>
-        <WrapPanel Grid.Column="1" Grid.Row="1" Background="#FF3C3C3C" HorizontalAlignment="Center">
-            <ScrollViewer x:Name="userControlVisibility" >
+            <!-- userControl -->
+        </StackPanel >
+        <ScrollViewer x:Name="userControlVisibility" Grid.Column="1" Grid.Row="1" Background="#FF3C3C3C" HorizontalAlignment="Center">
 
-                <WrapPanel x:Name="wrap" HorizontalAlignment="Center" Margin="0"></WrapPanel>
+            <WrapPanel x:Name="wrap" HorizontalAlignment="Center" Margin="0"></WrapPanel>
         </ScrollViewer>
-        </WrapPanel>
     </Grid>
 </Window>
