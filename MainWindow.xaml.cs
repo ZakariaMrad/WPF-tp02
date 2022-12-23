@@ -38,5 +38,11 @@ namespace tp2
             Close();
         }
 
+        private void openZakaria(object sender, RoutedEventArgs e)
+        {
+            Window window = new Zakaria.Window1();
+            window.Show();
+            Close();
+        }
     }
 }

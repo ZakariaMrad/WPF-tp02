@@ -38,6 +38,17 @@
     <None Remove="Wall\Assets\Users\user3.jpg" />
     <None Remove="Wall\Assets\Users\user4.jpg" />
     <None Remove="Wall\Assets\Users\user5.jpg" />
+    <None Remove="Zakaria\Assets\Pictures\americanexpress.png" />
+    <None Remove="Zakaria\Assets\Pictures\arrowdown.jpg" />
+    <None Remove="Zakaria\Assets\Pictures\crown.jpg" />
+    <None Remove="Zakaria\Assets\Pictures\mastercard.png" />
+    <None Remove="Zakaria\Assets\Pictures\mastercard.svg" />
+    <None Remove="Zakaria\Assets\Pictures\visa.png" />
+    <None Remove="Zakaria\Assets\TShirts\a-black.jpg" />
+    <None Remove="Zakaria\Assets\TShirts\a-green.jpg" />
+    <None Remove="Zakaria\Assets\TShirts\a-red.jpg" />
+    <None Remove="Zakaria\Assets\TShirts\b-encanto.jpg" />
+    <None Remove="Zakaria\Assets\TShirts\b-gray.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -109,6 +120,19 @@
     <Resource Include="Marketplace\Assets\Offers\Cars\car7.jpg" />
     <Resource Include="Marketplace\Assets\Offers\Cars\car8.jpg" />
     <Resource Include="Marketplace\Assets\Offers\Cars\car9.jpg" />
+    <Resource Include="Zakaria\Assets\Pictures\americanexpress.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Zakaria\Assets\Pictures\arrowdown.jpg" />
+    <Resource Include="Zakaria\Assets\Pictures\crown.jpg" />
+    <Resource Include="Zakaria\Assets\Pictures\mastercard.png" />
+    <Resource Include="Zakaria\Assets\Pictures\mastercard.svg" />
+    <Resource Include="Zakaria\Assets\Pictures\visa.png" />
+    <Resource Include="Zakaria\Assets\TShirts\a-black.jpg" />
+    <Resource Include="Zakaria\Assets\TShirts\a-green.jpg" />
+    <Resource Include="Zakaria\Assets\TShirts\a-red.jpg" />
+    <Resource Include="Zakaria\Assets\TShirts\b-encanto.jpg" />
+    <Resource Include="Zakaria\Assets\TShirts\b-gray.jpg" />
   </ItemGroup>
 
 </Project>

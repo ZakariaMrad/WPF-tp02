@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using Tp_Synthèse_B;
 using tp2.Marketplace.pourlemoment.Classes;
 using tp2.partieB___jeremy.Assets.Classe;
 using tp2.Wall.Assets;
@@ -37,15 +38,44 @@ namespace tp2
             return new Uri(ApplicationBaseUri2 + path);
         }
 
-        public static readonly string ApplicationBaseUri3 = "pack://application:,,,/tp2;component/partieB - jeremy/Assets";
-
-        public static Uri GetUri3(string path)
+        public static readonly string ApplicationBaseUri3 = "pack://application:,,,/tp2;component/Zakaria/Assets/TShirts/";
+        public static Uri getURIZ(string path)
         {
             return new Uri(ApplicationBaseUri3 + path);
         }
 
 
+
+        public static readonly string ApplicationBaseUri4 = "pack://application:,,,/tp2;component/partieB - jeremy/Assets";
+
+        public static Uri GetUri3(string path)
+        {
+            return new Uri(ApplicationBaseUri4 + path);
+        }
+
+
         static string lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?";
+        
+        public static Dictionary<int, Clothes> Products = new Dictionary<int, Clothes>()
+        {
+            {0,new Clothes(0,"chandail","C'est le meilleur chandail sur terre!",24.99,
+                new Dictionary<string, string>()
+                {
+                    {"black","a-black.jpg" },
+                    {"green","a-green.jpg" },
+                    {"red","a-red.jpg" },
+                }, 
+                new List<string>(){"xs","s","m","xl"},5) 
+            },
+            {1,new Clothes(1,"chandail","Chandail pas cher!!",20.99,
+                new Dictionary<string, string>()
+                {
+                    {"encanto","b-encanto.jpg" },
+                    {"gray","b-gray.jpg" },
+                }, 
+                new List<string>(){"xs","s","m","xl"},5) 
+            },
+        };
 
         public Dictionary<int, Cars> cars = new Dictionary<int, Cars>()
         {

@@ -14,6 +14,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Center" FontSize="20" FontWeight="DemiBold" TextAlignment="Center" TextWrapping="Wrap" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0">
@@ -24,6 +25,9 @@
         </Button>
         <Button FontSize="20" Grid.Row="1" Grid.Column="1" Click=" openWall">
             Wall
+        </Button>
+        <Button FontSize="20" Grid.Row="2" Grid.Column="0" Click="openZakaria">
+            Zakaria
         </Button>
     </Grid>
 </Window>
