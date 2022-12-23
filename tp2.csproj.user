@@ -13,6 +13,15 @@
     <Compile Update="Marketplace\userControl\UserControlMarketPlace.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="partieB - jeremy\cinema.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="partieB - jeremy\userControl\UserControlCart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="partieB - jeremy\userControl\UserControlFilmCinema.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -22,6 +31,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Marketplace\userControl\UserControlMarketPlace.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="partieB - jeremy\cinema.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="partieB - jeremy\userControl\UserControlCart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="partieB - jeremy\userControl\UserControlFilmCinema.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
