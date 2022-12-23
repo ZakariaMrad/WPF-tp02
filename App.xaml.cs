@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using tp2.Marketplace.pourlemoment.Classes;
+using tp2.partieB___jeremy.Assets.Classe;
 using tp2.Wall.Assets;
 using tp2.Wall.Assets.Classes;
 
@@ -35,10 +36,19 @@ namespace tp2
         {
             return new Uri(ApplicationBaseUri2 + path);
         }
+
+        public static readonly string ApplicationBaseUri3 = "pack://application:,,,/tp2;component/partieB - jeremy/Assets";
+
+        public static Uri GetUri3(string path)
+        {
+            return new Uri(ApplicationBaseUri3 + path);
+        }
+
+
         static string lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?";
 
         public Dictionary<int, Cars> cars = new Dictionary<int, Cars>()
-        {           
+        {
 
            {1, new Cars(){Image ="/Offers/Cars/car1.jpg", PublishDate="2021-11-19",CarPrice=6000 ,CarFabricant="Honda", CarName="Accord",   CarYear=2014,Kilometer=170}},
            {2, new Cars(){Image ="/Offers/Cars/car2.jpg", PublishDate="2021-11-19",CarPrice=5000 ,CarFabricant="Toyota",CarName="Camry",    CarYear=2015,Kilometer=200}},
@@ -60,6 +70,12 @@ namespace tp2
             {100,"Appliances" },
             {101,"Cars" },
             {102,"Property Rentals" },
+        };
+
+        public static Dictionary<int, string> FilterFilm = new Dictionary<int, string>
+        {
+            {100,"prochaine" },
+            {101,"titres de film" },
         };
 
         //public static Dictionary<int, string> Maker = new Dictionary<int, string>
@@ -112,10 +128,10 @@ namespace tp2
         {
             App.Current.CurrentUser = Users[1001];
             //Add Users
-            mainGroup.addUser(Users[1001],Users[1002]);
-            mainGroup.addUser(Users[1001],Users[1003]);
-            mainGroup.addUser(Users[1001],Users[1004]);
-            mainGroup.addUser(Users[1001],Users[1005]);
+            mainGroup.addUser(Users[1001], Users[1002]);
+            mainGroup.addUser(Users[1001], Users[1003]);
+            mainGroup.addUser(Users[1001], Users[1004]);
+            mainGroup.addUser(Users[1001], Users[1005]);
 
             //Add Posts
             mainGroup.addPost(Posts[101]);
@@ -131,9 +147,36 @@ namespace tp2
         }
 
 
+        // partie B - cinema
+
+        public Dictionary<int, Synopsis> Synopsises = new Dictionary<int, Synopsis>()
+        {
+            {10,new Synopsis(){ Id=11, Resume="tu te souvendras de moi"} },
+            {20,new Synopsis(){ Id=12, Resume="Au Nord d'Albany"} },
+            {30,new Synopsis(){ Id=13, Resume="23 décembre"} },
+            {40,new Synopsis(){ Id=15, Resume="Black Panther: longue vie au wakanda"} },
+            {50,new Synopsis(){ Id=16, Resume="o violente nuit"} },
+        };
+
+        public Dictionary<int, Film> vente = new Dictionary<int, Film>() { };
+
+
+        public Dictionary<int, Film> Films = new Dictionary<int, Film>()
+        {
+            { 1, new Film(){Id=11,Representation=new Representation(110,"Tu te souvendras de moi","1:50",15), Classement="G",Version="V.F.",IsESV= false,Is3D=false,Image="/Images/Films/souviendrasDeMoi.jpg", Temps=new List<string>{"12:40","3:30","6:30","9:30"} } },
+            { 2, new Film(){Id=12,Representation=new Representation(111,"Au Nord d'Albany","1:47",15),      Classement= "G",Version="V.F.",                    IsESV=false,Is3D=false,Image="/Images/Films/aunorddalbany.jpg",Temps=new List<string>{"12:30","3:30","6:30","9:30"} } },
+            { 3, new Film(){Id=13,Representation=new Representation(112,"23 décembre","1:41",15), Classement="G",Version="V.F.",                               IsESV=false,Is3D=false,Image="/Images/Films/23Decembre.jpg",Temps=new List<string>{"12:35","3:30","6:30","9:30"} } },
+            { 4, new Film(){Id=15,Representation=new Representation(113,"Black Panther: longue vie au wakanda","2:41",10), Classement= "GDJE",Version="V.F.",  IsESV=false,Is3D=true, Image="/Images/Films/Wakanda.jpg",Temps=new List<string>{"12:50","3:30","6:30","9:30"} } },
+            { 5, new Film(){Id=15,Representation=new Representation(114,"Black Panther: longue vie au wakanda","2:41",10), Classement= "GDJE", Version="V.F.", IsESV=true, Is3D=true, Image="/Images/Films/Wakanda.jpg",Temps=new List<string>{"12:45","3:30","6:30","9:30"} } },
+            { 6, new Film(){Id=16,Representation=new Representation(115,"o violente nuit ","1:41",15), Classement="13+", Version="V.F.",                       IsESV=false,Is3D=false,Image="/Images/Films/violentnight.jpeg",Temps=new List<string>{"12:30","3:30","6:30","9:30"} } },
+        };
 
 
 
-     
+
+
+
+
+
     }
 }

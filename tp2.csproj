@@ -12,6 +12,11 @@
     <EmbeddedResource Remove="Marketplace\test\**" />
     <None Remove="Marketplace\test\**" />
     <Page Remove="Marketplace\test\**" />
+    <None Remove="partieB - jeremy\Assets\Images\Films\23Decembre.jpg" />
+    <None Remove="partieB - jeremy\Assets\Images\Films\auNordDalbany.jpg" />
+    <None Remove="partieB - jeremy\Assets\Images\Films\souviendrasDeMoi.jpg" />
+    <None Remove="partieB - jeremy\Assets\Images\Films\violentnight.jpeg" />
+    <None Remove="partieB - jeremy\Assets\Images\Films\Wakanda.jpg" />
     <None Remove="Wall\Assets\Icons\angry.png" />
     <None Remove="Wall\Assets\Icons\like.png" />
     <None Remove="Wall\Assets\Icons\love.png" />
@@ -36,6 +41,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="partieB - jeremy\Assets\Images\Films\23Decembre.jpg" />
+    <Resource Include="partieB - jeremy\Assets\Images\Films\auNordDalbany.jpg" />
+    <Resource Include="partieB - jeremy\Assets\Images\Films\souviendrasDeMoi.jpg" />
+    <Resource Include="partieB - jeremy\Assets\Images\Films\violentnight.jpeg" />
+    <Resource Include="partieB - jeremy\Assets\Images\Films\Wakanda.jpg" />
     <Resource Include="Wall\Assets\Icons\angry.png" />
     <Resource Include="Wall\Assets\Icons\like.png" />
     <Resource Include="Wall\Assets\Icons\love.png" />
