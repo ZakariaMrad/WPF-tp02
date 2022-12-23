@@ -42,7 +42,7 @@ namespace tp2.partieB___jeremy.userControl
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
          {
 
-            cinema cinema = new cinema();
+            Cinema cinema = new Cinema();
             cinema.compteur = Compteur;
 
             if(cinema.buttonAchat1.IsChecked == true)

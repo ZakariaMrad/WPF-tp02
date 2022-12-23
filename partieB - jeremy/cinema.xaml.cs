@@ -21,11 +21,11 @@ namespace tp2.partieB___jeremy
     /// <summary>
     /// Interaction logic for cinema.xaml
     /// </summary>
-    public partial class cinema : Page
+    public partial class Cinema : Window
     {
         Film FilmChoisi;
         public int compteur { get; set; }
-        public cinema()
+        public Cinema()
         {
             
             InitializeComponent();
@@ -116,11 +116,6 @@ namespace tp2.partieB___jeremy
         {
             FilmChoisi = film;
 
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }

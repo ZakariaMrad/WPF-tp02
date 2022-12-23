@@ -1,4 +1,4 @@
-﻿<Page x:Class="tp2.partieB___jeremy.cinema"
+﻿<Window x:Class="tp2.partieB___jeremy.Cinema"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -112,4 +112,4 @@
             </WrapPanel>
         </StackPanel>
     </Grid>
-</Page>
+</Window>

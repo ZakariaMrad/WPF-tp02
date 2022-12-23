@@ -29,5 +29,8 @@
         <Button FontSize="20" Grid.Row="2" Grid.Column="0" Click="openZakaria">
             Zakaria
         </Button>
+        <Button FontSize="20" Grid.Row="2" Grid.Column="1" Click="openJeremy">
+            Jeremy
+        </Button>
     </Grid>
 </Window>

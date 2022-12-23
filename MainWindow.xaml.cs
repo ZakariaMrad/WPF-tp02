@@ -44,5 +44,12 @@ namespace tp2
             window.Show();
             Close();
         }
+
+        private void openJeremy(object sender, RoutedEventArgs e)
+        {
+            Window window = new partieB___jeremy.Cinema();
+            window.Show();
+            Close();
+        }
     }
 }

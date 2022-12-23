@@ -16,6 +16,9 @@
     <Compile Update="partieB - jeremy\cinema.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="partieB - jeremy\CinemaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="partieB - jeremy\userControl\UserControlCart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="partieB - jeremy\cinema.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="partieB - jeremy\CinemaWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="partieB - jeremy\userControl\UserControlCart.xaml">
